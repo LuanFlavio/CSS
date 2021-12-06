@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root{
+    --blue: #1d579e ;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --grey-dark: #5a5c69;
+    --grey-dark-mode: #484a58;
+    --back-dark-mode: #1f2026;    
+    --black: #222;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body.darkMode{
+    --grey: #1d579e;
+    /* --grey: #3a3a3f; */
+    --white: #1f2026;
+    --blue: #2f81e5;
+}
+
+.container{
+    position: relative;
+    max-width: 100%;
+}
+
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+body.darkMode .navigation{
+    background: var(--white);
+    border-left: 10px solid var(--white);
+}
+
+.navigation.active{
+    width: 80px;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered{
+    background: var(--grey);
+}
+
+.navigation.active ul li:nth-child(1){
+    padding-left: 0;
+}
+
+
+
+.navigation ul li:nth-child(1){
+    padding: 20px;
+    padding-left: 55px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    pointer-events: none;
+    font-weight: 600;
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+body.darkMode .navigation ul li:nth-child(1) a{
+    color: #dbdbdb;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--grey);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a{
+    color: var(--blue);
+}
+
+body.darkMode .navigation ul li:hover a,
+body.darkMode .navigation ul li.hovered a{
+    color: #dbdbdb;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon{
+   font-size: 1.75em;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--grey);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--grey);
+    pointer-events: none;
+}
+
+/* main */
+
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--grey);
+    transition: 0.5s;
+}
+
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle{
+    position: relative;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 2.8em;
+    cursor: pointer;
+    color: var(--blue);
+}
+
+body.darkMode .toggle{
+    color: var(--white);
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+
+.search label input{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    border: 1px solid var(--grey-dark);
+}
+
+.search label ion-icon{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
+}
+
+body.darkMode .search label ion-icon{
+    color: var(--grey-dark);
+}
+
+body.darkMode .search label input{
+    color: var(--grey-dark);
+    background: var(--white);
+    border-color: var(--white);
+}
+
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
+
+.cardBox .card{
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.cardBox .card .numbers{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: var(--blue);
+}
+
+.cardBox .card .cardName{
+    color: var(--grey-dark);
+}
+
+body.darkMode .cardBox .card .cardName{
+    color: #999999;
+}
+
+body.darkMode .cardBox .card:hover .cardName{
+    color: var(--white);
+}
+
+.cardBox .card .iconBx{
+    font-size: 3.5em;
+    color: var(--grey-dark);
+}
+
+.cardBox .card:hover{
+    background: var(--blue);
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx{
+    color: var(--white);
+}
+
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+}
+
+.details .infosDestaque{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2{
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.btn{
+    position: relative;
+    padding: 10px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td{
+    font-weight: 600;
+}
+
+.details .infosDestaque table tr{
+    color: var(--black);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.details .infosDestaque table tr:last-child{
+    border-bottom: none;
+}
+
+.details .infosDestaque table tbody tr:hover{
+    background: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.details .infosDestaque table tr td{
+    padding: 10px;
+}
+
+.details .infosDestaque table tr td:last-child{
+    text-align: end;
+}
+
+.details .infosDestaque table tr td:nth-child(2),
+.details .infosDestaque table tr td:nth-child(3){
+    text-align: center;
+}
+
+body.darkMode table td{
+    color: #dbdbdb;
+}
+
+.status.distribuidora{
+    padding: 4px 6px;
+    background: rgb(18, 151, 0);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.padaria{
+    padding: 4px 6px;
+    background: rgb(228, 124, 6);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.vendinha{
+    padding: 4px 6px;
+    background: rgb(151, 0, 101);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.papelaria{
+    padding: 4px 6px;
+    background: rgb(0, 128, 151);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rankDestaque{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+}
+
+.rankDestaque .developersRank{
+    position: relative;
+    display: grid;
+    min-height: 250px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+
+.rankDestaque .supportRank{
+    position: relative;
+    display: grid;
+    min-height: 250px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+
+.rankDestaque .developersRank .imgBx,
+.rankDestaque .supportRank .imgBx{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.rankDestaque .developersRank .imgBx img,
+.rankDestaque .supportRank .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--white);
+}
+
+.rankDestaque .developersRank table tr:nth-child(1) td .imgBx,
+.rankDestaque .supportRank table tr:nth-child(1) td .imgBx{
+    border: 4px solid #d8c200; 
+    box-shadow: 0 0 15px #d8d400;
+}
+
+.rankDestaque .developersRank table tr:nth-child(2) td .imgBx,
+.rankDestaque .supportRank table tr:nth-child(2) td .imgBx{
+    border: 4px solid #909090;
+}
+
+.rankDestaque .developersRank table tr:nth-child(3) td .imgBx,
+.rankDestaque .supportRank table tr:nth-child(3) td .imgBx{
+    border: 4px solid #995200;
+}
+
+.rankDestaque .developersRank table tr:hover,
+.rankDestaque .supportRank table tr:hover{
+    background: var(--blue);
+    color: var(--white) ;
+    cursor: pointer;
+}
+
+.rankDestaque .developersRank table tr td,
+.rankDestaque .supportRank table tr td{
+    padding: 5px 10px;
+}
+
+.rankDestaque .developersRank table tr td span,
+.rankDestaque .supportRank table tr td span{
+    font-size: 1.1em;
+}
+
+.rankDestaque .developersRank table tr td:nth-child(3),
+.rankDestaque .supportRank table tr td:nth-child(3){
+    text-align: center;
+}

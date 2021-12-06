@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="logo-google"></ion-icon></span>
+                        <span class="title">Gsoft</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Usuários</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
+                        <span class="title">Mensagens</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>
+                        <span class="title">Tickets</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- <ion-icon name="construct-outline"></ion-icon> -->
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </ul>   
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label for="">
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="./img/user.png">
+                </div>
+            </div>
+
+            <!-- cards -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">600+</div>
+                        <div class="cardName">Clientes</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">21</div>
+                        <div class="cardName">Atendimentos Diários</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="megaphone-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">1234</div>
+                        <div class="cardName">Tickets</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="reader-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">123</div>
+                        <div class="cardName">Tickets Concluídos</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="receipt-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- infos -->
+            <div class="details">
+                <div class="infosDestaque">
+                    <div class="cardHeader">
+                        <h2>Destaques de Clientes</h2>
+                        <a href="#" class="btn">Ver mais...</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Terminais</td>
+                                <td>Segmento</td>
+                                <td>Revenda</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td>Vale Dangerous</td>
+                                <td>30</td>
+                                <td><span class="status vendinha">Vendinha</span></td>
+                                <td>Gsoft Matriz</td>
+                            </tr>
+                            <tr> 
+                                <td>Mil Embalagens</td>
+                                <td>10</td>
+                                <td><span class="status distribuidora">Distribuidora</span></td>
+                                <td>Gsoft Paraguai</td>
+                            </tr>
+                            <tr> 
+                                <td>Iraceminha</td>
+                                <td>8</td>
+                                <td><span class="status papelaria">Papelaria</span></td>
+                                <td>Gsoft Matriz</td>
+                            </tr>
+                            <tr> 
+                                <td>Casa dos Sabores</td>
+                                <td>5</td>
+                                <td><span class="status padaria">Padaria</span></td>
+                                <td>Gsoft Paraguai</td>
+                            </tr>
+                            <tr> 
+                                <td>Jarbas</td>
+                                <td>5</td>
+                                <td><span class="status padaria">Padaria</span></td>
+                                <td>Gsoft Matriz</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rankDestaque">
+                    <div class="developersRank">
+                        <div class="cardHeader">
+                            <h2>Tickets</h2>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="./img/user.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Dev1</h4>
+                                </td>
+                                <td>
+                                    <span>NumTicket</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="./img/user.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Dev2</h4>
+                                </td>
+                                <td>
+                                    <span>NumTicket</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="./img/user.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Dev3</h4>
+                                </td>
+                                <td>
+                                    <span>NumTicket</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="supportRank">
+                        <div class="cardHeader">
+                            <h2>Atendimentos</h2>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="./img/user.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Sup1</h4>
+                                </td>
+                                <td>
+                                    <span>NumAtendimento</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="./img/user.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Sup2</h4>
+                                </td>
+                                <td>
+                                    <span>NumAtendimento</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="./img/user.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Sup3</h4>
+                                </td>
+                                <td>
+                                    <span>NumAtendimento</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>       
+    <script>
+        //menu
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        let body = document.querySelector('body');
+        let imgUser = document.querySelector('.user');
+        
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        imgUser.onclick = function(){
+            body.classList.toggle('darkMode');
+        }
+
+        //hover class
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered');
+        }
+        list.forEach((item) =>
+        item.addEventListener('mouseover', activeLink));
+
+        let seg = document.querySelectorAll('.status');
+        seg.forEach(it => {
+            it.classList.add(it.textContent);
+            console.log(it.textContent);
+        });
+        
+        
+    </script>
+</body>
+</html>

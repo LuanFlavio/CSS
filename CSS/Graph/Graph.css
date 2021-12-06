@@ -1,0 +1,44 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	overflow-x: hidden;
+	min-height: 100vh;
+	background: linear-gradient(25deg, #004aaa, #0055aa 75%, #39404f 50%, #fff 160%), repeat;
+}
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 40px;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: 100vw;
+}
+.card
+{
+	position: relative;
+	overflow: hidden;
+	padding: 30px;
+	margin: 30px;
+	width: 600px;
+	height: 400px;
+	display: flex;
+	border-radius: 10px;
+	background: #fff;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(20px);
+	background: rgba(250, 250, 250, 0.1);
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.card-destaque
+{
+	min-width: 80vw;
+	max-width: 900px;
+	min-height: 500px;
+
+}
