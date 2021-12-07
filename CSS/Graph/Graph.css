@@ -8,7 +8,8 @@ body
 {
 	overflow-x: hidden;
 	min-height: 100vh;
-	background: linear-gradient(25deg, #004aaa, #0055aa 75%, #39404f 50%, #fff 160%), repeat;
+	background: linear-gradient(0,#202225 50%, #000 100%), repeat;
+	
 }
 .container{
 	display: flex;
@@ -16,13 +17,14 @@ body
 	padding: 40px;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	width: 100vw;
 }
 .card
 {
 	position: relative;
 	overflow: hidden;
+	justify-content: center;
 	padding: 30px;
 	margin: 30px;
 	width: 600px;
@@ -35,10 +37,13 @@ body
 	background: rgba(250, 250, 250, 0.1);
 	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
+.card::before
+{
+	justify-content: left;
+}
 .card-destaque
 {
 	min-width: 80vw;
-	max-width: 900px;
+	max-width: 1280px;
 	min-height: 500px;
-
 }
