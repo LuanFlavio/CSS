@@ -1,0 +1,121 @@
+body{
+    padding: 0;
+    background: #0078d4;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    height: 50vh;
+    transform: scale(0.7);
+    overflow: hidden;
+}
+
+.card{
+    margin: auto calc(50% - 200px);
+    display: flex;
+    border-radius: 30px;
+    transform: rotatez(0); /* -20deg  */
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: #000 0 10px 20px;
+}
+
+.card-1{
+    position: absolute;
+    width: 300px;   
+    height: 450px;
+    background: linear-gradient(#046fc5 60%, #1a4472);
+    transform: rotateZ(-20deg) translateX(-110px);
+}
+.card-2{
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    background: linear-gradient(#30baee 60%, #1d81a5);
+    transform: rotateZ(0deg);
+}
+.card-3{
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    background: linear-gradient(#fff 60%, #d4d4d4);
+    transform: rotateZ(20deg) translate(110px);
+}
+
+.card-1:hover{
+    transform: rotateZ(-45deg) translateX(-130px) translateY(-70px);
+}
+
+.card-2:hover{
+    transform: translateY(-180px);
+}
+
+.card-3:hover{
+    transform: rotateZ(45deg) translateX(150px) translateY(-20px);
+}
+
+div.center{
+    position: relative;
+    top: -0.6rem;
+    /*display: flex;*/
+    align-self: center;
+    margin: 0 auto;
+    /*width: 180px;*/
+    /*height: 180px;*/
+}
+
+div.up{
+    transform: scale(.3);
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+div.down{
+    transform: scale(.3);
+    margin: 22.6rem 1.6rem 0 -1.6rem; /*25px -30px*/
+    /*align-self: flex-end;*/
+    width: 60px;
+    height: 60px;
+}
+
+.symbol{
+    align-self: center;
+    margin: 0 auto;
+    border-bottom: 80px solid #212121;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    transform: translateY(-3rem);
+}
+
+.symbol::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background: #212121;  /*#a13*/
+    transform: translateY(84%);
+    z-index: 2;
+}
+
+.symbol::after{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background: #212121;
+    transform: translateY(84%) translateX(-100%);
+    z-index: 2;
+}
+
+.base{
+    position: absolute;
+    margin: 0 3rem;
+    top: 10%;
+    width: 30px;
+    height: 130px;
+    background: #212121;
+    transform: translateY(10%) translateX(0.4em);
+    z-index: 2;
+}
