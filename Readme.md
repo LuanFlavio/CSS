@@ -1,1 +1,3 @@
-Olá, esse é o meu primeiro Commit. :)
+## CSS
+
+I use this repository to store my simple projects made with CSS.
